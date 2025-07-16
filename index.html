@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raja Ampat Adventure</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <img src="assets/images/icon.png" alt="Logo Raja Ampat" width="40" height="40" class="me-2">
+    <a class="navbar-brand" href="#">Raja Ampat Adventure</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<header class="bg-light text-center p-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <h1>Jelajahi Surga Raja Ampat</h1>
+        <p class="lead">Wisata Bahari Terindah di Dunia</p>
+      </div>
+      <div class="col-md-6 text-md-start text-center">
+        <div class="d-flex align-items-start">
+          <i class="bi bi-geo-alt-fill text-success fs-2 me-2"></i>
+          <p class="mb-0 text-start">
+            Raja Ampat, Papua, terletak di barat bagian Semenanjung Kepala Burung Barat (Vogelkoop) di Pulau Papua, Indonesia.    
+            Lokasi ini dapat dijangkau dengan kapal dari Sorong, yang merupakan kota terdekat. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="container my-4" id="info">
+  <h2>Informasi</h2>
+  <p><strong>Raja Ampat</strong> adalah gugusan kepulauan di Papua Barat yang dikenal sebagai salah satu destinasi wisata bahari terbaik di dunia. Dikenal dengan keanekaragaman hayati bawah lautnya, Raja Ampat menjadi surga bagi para penyelam dan pecinta alam. Secara administratif, Raja Ampat merupakan bagian dari Provinsi Papua Barat dan terdiri dari sekitar 1.500 pulau, cays, dan shoals. Kabupaten Raja Ampat memiliki luas wilayah sekitar 6.084,5 km².</p>
+  <img src="assets/images/rajaampat.jpg" class="img-fluid rounded" alt="Raja Ampat">
+  <ul class="list-group list-group-flush my-3">
+     <li class="list-group-item">
+      <strong>Snorkeling & Diving:</strong>  
+      Menyelami keindahan terumbu karang yang masih alami dengan ribuan spesies ikan, biota laut, dan karang warna-warni yang sulit ditemukan di tempat lain di dunia.
+    </li>
+    <li class="list-group-item">
+      <strong>Island Hopping:</strong>  
+      Menjelajahi pulau-pulau kecil berpasir putih seperti Pianemo, Wayag, dan Arborek sambil menikmati panorama alam yang memesona.
+    </li>
+    <li class="list-group-item">
+      <strong>Eksplorasi Budaya Lokal:</strong>  
+      Berinteraksi dengan masyarakat lokal, mengenal adat istiadat Papua, dan mencicipi kuliner tradisional khas Raja Ampat.
+    </li>
+  </ul>
+
+  <table class="table table-bordered">
+    <thead><tr><th>Aktivitas</th><th>Harga (Per Orang)</th><th>Keterangan</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Diving Paket Full Day</td>
+        <td>Rp 1.000.000</td>
+        <td>Termasuk peralatan diving, guide profesional, dan dokumentasi underwater.</td>
+      </tr>
+      <tr>
+        <td>Island Tour (Half Day)</td>
+        <td>Rp 500.000</td>
+        <td>Jelajah 3 pulau favorit dengan kapal wisata & snack lokal.</td>
+      </tr>
+      <tr>
+        <td>Snorkeling Paket Pagi</td>
+        <td>Rp 300.000</td>
+        <td>Penyewaan alat snorkeling dan pemandu wisata setempat.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-success" onclick="showTips()">Tips Wisata</button>
+</div>
+
+<div class="container my-4" id="galeri">
+  <h2>Galeri</h2>
+  <div class="mb-3">
+    <video class="w-100 " controls poster="assets/images/rajaampat1.jpg">
+      <source src="assets/video/rajaampat.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="mb-3">
+    <audio autoplay loop controls>
+      <source src="assets/audio/welcome.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<div class="container my-4" id="booking">
+  <h2>Form Booking</h2>
+  <form onsubmit="return validateBooking()">
+    <div class="mb-3">
+      <label for="nama" class="form-label">Nama</label>
+      <input type="text" class="form-control" id="nama" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="paket" class="form-label">Paket</label>
+      <select id="paket" class="form-select" required>
+        <option value="">Pilih Paket</option>
+        <option value="Diving">Diving</option>
+        <option value="Island Tour">Island Tour</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success">Kirim Booking</button>
+  </form>
+</div>
+
+<footer class="bg-success text-white text-center py-3">
+  &copy; 2025 Adrianto Prabowo | UNSIA
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
